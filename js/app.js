@@ -10,8 +10,8 @@ app.controller('myCtrl', ['$scope', '$location', '$anchorScroll', '$http', funct
     $scope.flags.aboutUsSection = false;
     $scope.ourApplicationList = ['Marine Parts', 'Rolling Mill', 'Sugar Mill', 'Valve Industries', 'Crusher', 'Dam Gate', 'Fertilizer Machinery & More Industries...'];
     $scope.moreAboutDetails = [
-        'Madhav Metal Cast Factory is a manufacturing process where molten, liquid metal is poured into a mold and is left to cool to conform to the mold’s shape when solidified.',
-        'We, at Madhav Metal Cast are engaged in Manufacturing of a wide range of Steel casting and S.G.I. and C.I.Casting in different metallurgical speciﬁcations.',
+        'Madhav Techno Cast Factory is a manufacturing process where molten, liquid metal is poured into a mold and is left to cool to conform to the mold’s shape when solidified.',
+        'We, at Madhav Techno Cast are engaged in Manufacturing of a wide range of Steel casting and S.G.I. and C.I.Casting in different metallurgical speciﬁcations.',
         'These includes WCB Casting, Manganese Steel &amp; Carbon Steel Casting, Nickel and Molly based Casting, EN Series Casting etc.',
         'Our well developed infrastructure with complete production facilities spread over an area of 1800 sq. meters. Casting foundry experience more than 15 years.',
         'Manufacture highest quality casting at very competitive rate and provide prompt delivery to all customers in India and outside India.',
