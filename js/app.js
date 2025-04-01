@@ -38,10 +38,10 @@ app.controller('myCtrl', ['$scope', '$location', '$anchorScroll', '$http', funct
         'Shot Blasting Machine : 6 Feet x 6 Feet x 5 Feet – double door shot blast machine in House.'
     ];
     $scope.homeSliderList = [
-        {"h1Text":"Metal Cast Solution", "h1BelowText":"Implement your innovation with advanced Manufacturing Technology", "bgImagePath":"MADHAV/Home_Slider/Home_1.jpg"},
-        {"h1Text":"Metal Cast Solution", "h1BelowText":"Implement your innovation with advanced Manufacturing Technology", "bgImagePath":"MADHAV/Home_Slider/Home_2.jpg"},
-        {"h1Text":"Metal Cast Solution", "h1BelowText":"Implement your innovation with advanced Manufacturing Technology", "bgImagePath":"MADHAV/Home_Slider/Home_3.jpg"},
-        {"h1Text":"Metal Cast Solution", "h1BelowText":"Implement your innovation with advanced Manufacturing Technology", "bgImagePath":"MADHAV/Home_Slider/Home_4.jpg"}
+        {"h1Text":"Techno Cast Solution", "h1BelowText":"Implement your innovation with advanced Manufacturing Technology", "bgImagePath":"MADHAV/Home_Slider/Home_1.jpg"},
+        {"h1Text":"Techno Cast Solution", "h1BelowText":"Implement your innovation with advanced Manufacturing Technology", "bgImagePath":"MADHAV/Home_Slider/Home_2.jpg"},
+        {"h1Text":"Techno Cast Solution", "h1BelowText":"Implement your innovation with advanced Manufacturing Technology", "bgImagePath":"MADHAV/Home_Slider/Home_3.jpg"},
+        {"h1Text":"Techno Cast Solution", "h1BelowText":"Implement your innovation with advanced Manufacturing Technology", "bgImagePath":"MADHAV/Home_Slider/Home_4.jpg"}
     ];
     
     $scope.onClickHeader = function(currentOption) {
