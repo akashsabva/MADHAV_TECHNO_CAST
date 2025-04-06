@@ -20,11 +20,12 @@ app.controller('myCtrl', ['$scope', '$location', '$anchorScroll', '$http', funct
     $scope.ourProductList = [
         {"productName":"Carbon Steel RING", "productImagePath":"MADHAV/Products/plaincarbon.jpeg"},
         {"productName":"MS Padastals", "productImagePath":"MADHAV/Products/padastals.jpeg"},
-        {"productName":"Corrosion Resistance Stainless Steel", "productImagePath":"MADHAV/Products/corrosionResistance.jpg"},
-        {"productName":"Heat Resistant Steel", "productImagePath":"MADHAV/Products/heatResistantSteel.jpg"},
-        {"productName":"Manganese Steel", "productImagePath":"MADHAV/Products/manganeseSteel.jpg"},
+        {"productName":"Corrosion Resistance Stainless Steel", "productImagePath":"MADHAV/Products/ss varam.jpg"},
+        {"productName":"en8 en9 wheels", "productImagePath":"MADHAV/Products/trolley wheel.jpg"},
+        {"productName":"Manganese Steel", "productImagePath":"MADHAV/Products/couplings.jpeg"},
         {"productName":"Abrasive resistant Casting", "productImagePath":"MADHAV/Products/abrasiveResistantCasting.jpg"},
-        {"productName":"S.G.I. and C.I. Casting", "productImagePath":"MADHAV/Products/SGIandCICasting.jpg"},
+        {"productName":"S.G.I. and C.I. Casting", "productImagePath":"MADHAV/Products/ci and sgi casting.jpeg"},
+        {"productName":"en19 en24 castings", "productImagePath":"MADHAV/Products/en24pipes.jpeg"},
         {"productName":"All other grades as per customer’s speciﬁcation", "productImagePath":"MADHAV/Products/allOtherGrades.jpg"}
     ];
     $scope.facilitiesList = [
