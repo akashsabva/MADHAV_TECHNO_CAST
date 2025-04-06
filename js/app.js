@@ -18,8 +18,8 @@ app.controller('myCtrl', ['$scope', '$location', '$anchorScroll', '$http', funct
         'The Company Manufactures products for customers who expect perfection. Our Casting capacity range is between 20 kg to 2500 kg single piece.',
     ];
     $scope.ourProductList = [
-        {"productName":"Plain Carbon Steel", "productImagePath":"MADHAV/Products/plaincarbon.jpeg"},
-        {"productName":"Low Alloys Steel", "productImagePath":"MADHAV/Products/lowAlloysSteel.jpg"},
+        {"productName":"Carbon Steel RING", "productImagePath":"MADHAV/Products/plaincarbon.jpeg"},
+        {"productName":"MS Padastals", "productImagePath":"MADHAV/Products/padastals.jpeg"},
         {"productName":"Corrosion Resistance Stainless Steel", "productImagePath":"MADHAV/Products/corrosionResistance.jpg"},
         {"productName":"Heat Resistant Steel", "productImagePath":"MADHAV/Products/heatResistantSteel.jpg"},
         {"productName":"Manganese Steel", "productImagePath":"MADHAV/Products/manganeseSteel.jpg"},
