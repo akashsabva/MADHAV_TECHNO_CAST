@@ -9968,6 +9968,8 @@ body.flyout-searchbar-active .wraper_flyout_search > .table > .table-cell .flyou
   position: relative;
   display: block;
   margin-bottom: 30px;
+  visibility: visible !important;
+  animation-name: fadeInUp !important;
 }
 
 .shop-block-one .inner-box{
