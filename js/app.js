@@ -8,7 +8,7 @@ app.controller('myCtrl', ['$scope', '$location', '$anchorScroll', '$http', funct
     $scope.flags.homeSection = true;
     $scope.flags.contactUsSection = false;
     $scope.flags.aboutUsSection = false;
-    $scope.ourApplicationList = ['Marine Parts', 'Rolling Mill', 'Sugar Mill', 'Valve Industries', 'Crusher', 'Dam Gate', 'Fertilizer Machinery & More Industries...'];
+    $scope.ourApplicationList = ['Marine Parts', 'Rolling Mill', 'Sugar Mill', 'Valve Industries', 'Crusher', 'Dam Gate','Earth Moving Equipments parts','gear','flywheel', 'Fertilizer Machinery & More Industries...'];
     $scope.moreAboutDetails = [
         'Madhav Techno Cast Factory is a manufacturing process where molten, liquid metal is poured into a mold and is left to cool to conform to the mold’s shape when solidified.',
         'We, at Madhav Techno Cast are engaged in Manufacturing of a wide range of Steel casting and S.G.I. and C.I.Casting in different metallurgical speciﬁcations.',
