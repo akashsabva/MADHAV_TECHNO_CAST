@@ -18,18 +18,18 @@ app.controller('myCtrl', ['$scope', '$location', '$anchorScroll', '$http', funct
         'The Company Manufactures products for customers who expect perfection. Our Casting capacity range is between 20 kg to 2500 kg single piece.',
     ];
     $scope.ourProductList = [
-        {"productName":"Carbon Steel RING", "productImagePath":"MADHAV/Products/plaincarbon.jpeg"},
-        {"productName":"MS Padastals", "productImagePath":"MADHAV/Products/padastals.jpeg"},
-        {"productName":"Corrosion Resistance Stainless Steel", "productImagePath":"MADHAV/Products/ss varam.jpg"},
-        {"productName":"en8 en9 wheels", "productImagePath":"MADHAV/Products/trolley wheel.jpg"},
+        {"productName":"Carbon Steel RING","ProductUrl":"/carbonsteel.html", "productImagePath":"MADHAV/Products/plaincarbon.jpeg"},
+        {"productName":"MS Padastals","ProductUrl":"/carbonsteel.html", "productImagePath":"MADHAV/Products/padastals.jpeg"},
+        {"productName":"Corrosion Resistance Stainless Steel","ProductUrl":"/carbonsteel.html", "productImagePath":"MADHAV/Products/ss varam.jpg"},
+        {"productName":"en8 en9 wheels","ProductUrl":"/carbonsteel.html", "productImagePath":"MADHAV/Products/trolley wheel.jpg"},
         {"productName":"Manganese Steel", "productImagePath":"MADHAV/Products/couplings.jpeg"},
-        {"productName":"Abrasive resistant Casting", "productImagePath":"MADHAV/Products/abrasiveResistantCasting.jpg"},
-        {"productName":"S.G.I. and C.I. Casting", "productImagePath":"MADHAV/Products/ci and sgi casting.jpeg"},
-        {"productName":"en19 en24 castings", "productImagePath":"MADHAV/Products/en24pipes.jpeg"},
-        {"productName":"All other grades as per customer’s speciﬁcation", "productImagePath":"MADHAV/Products/allOtherGrades.jpg"}
+        {"productName":"Abrasive resistant Casting","ProductUrl":"/carbonsteel.html", "productImagePath":"MADHAV/Products/abrasiveResistantCasting.jpg"},
+        {"productName":"S.G.I. and C.I. Casting","ProductUrl":"/carbonsteel.html", "productImagePath":"MADHAV/Products/ci and sgi casting.jpeg"},
+        {"productName":"en19 en24 castings","ProductUrl":"/carbonsteel.html", "productImagePath":"MADHAV/Products/en24pipes.jpeg"},
+        {"productName":"All other grades as per customer’s speciﬁcation","ProductUrl":"/carbonsteel.html", "productImagePath":"MADHAV/Products/allOtherGrades.jpg"}
     ];
     $scope.facilitiesList = [
-        'Power Connection 625 KWA.',
+        'Power Connection 450 KVA.',
         'Induction Furnace with Melting capacity is 2500 Kg, 1000Kg, 200Kg and 150Kg Crucible–Inductotherm India Pvt Ltd.',
         'Co2 & 2Part sand hand moulding.',
         'Mach plate patterns.',
