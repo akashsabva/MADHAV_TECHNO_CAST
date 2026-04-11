@@ -2234,11 +2234,15 @@ button {
 
 .product-detail__grid {
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: minmax(0, 1fr) 360px;
   gap: 40px;
   align-items: flex-start;
   word-wrap: break-word; /* Prevent text overflow on mobile */
   overflow-wrap: break-word;
+}
+.product-detail__grid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .product-detail__title {
@@ -2322,6 +2326,10 @@ button {
 /* ── SPEC TABLE ─────────────────────── */
 .spec-section {
   margin-bottom: 36px;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto; /* Forces horizontal scroll on mobile */
+  -webkit-overflow-scrolling: touch;
 }
 
 .spec-table {
@@ -2807,7 +2815,7 @@ button {
 
   /* ── Product detail: stack layout ── */
   .product-detail__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .enquiry-sidebar { position: static; }
 
