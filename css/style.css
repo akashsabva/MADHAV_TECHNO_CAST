@@ -1,4 +1,4 @@
-/* ======================================
+﻿/* ======================================
    MADHAV TECHNO CAST – MODERN CSS
    Design: Industrial Dark Blue + Metallic
    Font: Poppins + Montserrat
@@ -1557,6 +1557,39 @@ button {
   color: rgba(255,255,255,0.5);
   gap: 12px;
   flex-wrap: wrap;
+}
+
+
+/* ── FOOTER CREDIT ───────────────────────── */
+.footer__credit {
+  display: flex;
+  align-items: center;
+}
+.footer__credit-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(255,255,255,0.8);
+  transition: all var(--transition-fast);
+}
+.footer__credit-link:hover {
+  color: var(--clr-white);
+}
+.footer__credit-img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.2);
+  transition: border-color var(--transition-fast);
+}
+.footer__credit-link:hover .footer__credit-img {
+  border-color: var(--clr-white);
+}
+.footer__credit-name {
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 /* ── WHATSAPP FLOAT ─────────────────────── */
@@ -3167,3 +3200,4 @@ button {
 .app-tag {
   white-space: normal;
 }
+
