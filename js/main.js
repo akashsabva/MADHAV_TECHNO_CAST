@@ -214,6 +214,22 @@
   const track = document.querySelector('.clients-strip__track');
   if (track) track.innerHTML += track.innerHTML;
 
+  /* ─── INFRA CARD EXPAND (mobile ≤480px) ── */
+  document.querySelectorAll('.infra-card').forEach(card => {
+    // Add toggle hint span if not present
+    if (!card.querySelector('.infra-card__desc-toggle')) {
+      const toggle = document.createElement('span');
+      toggle.className = 'infra-card__desc-toggle';
+      toggle.textContent = '▾ Tap to expand';
+      card.appendChild(toggle);
+    }
+    card.addEventListener('click', () => {
+      const isExpanded = card.classList.toggle('expanded');
+      const toggle = card.querySelector('.infra-card__desc-toggle');
+      if (toggle) toggle.textContent = isExpanded ? '▴ Collapse' : '▾ Tap to expand';
+    });
+  });
+
   /* ============================================================
      EMAILJS HELPERS
   ============================================================ */
@@ -262,11 +278,12 @@
 
       const errName  = document.getElementById('error-name');
       const errPhone = document.getElementById('error-phone');
+      const errEmail = document.getElementById('error-email');
       const errMsg   = document.getElementById('error-message');
 
       /* ── Clear previous errors ── */
-      [nameEl, phoneEl, msgEl].forEach(f => { if (f) f.classList.remove('invalid'); });
-      [errName, errPhone, errMsg].forEach(el => { if (el) el.textContent = ''; });
+      [nameEl, phoneEl, emailEl, msgEl].forEach(f => { if (f) f.classList.remove('invalid'); });
+      [errName, errPhone, errEmail, errMsg].forEach(el => { if (el) el.textContent = ''; });
       if (formSuccess) formSuccess.innerHTML = '';
 
       /* ── Validate ── */
@@ -278,11 +295,20 @@
         valid = false;
       }
 
-      if (phoneEl) {
+      if (emailEl) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailEl.value.trim() || !emailRegex.test(emailEl.value.trim())) {
+          emailEl.classList.add('invalid');
+          if (errEmail) errEmail.textContent = 'Please enter a valid email address.';
+          valid = false;
+        }
+      }
+
+      if (phoneEl && phoneEl.value.trim() !== '') {
         const ph = phoneEl.value.trim().replace(/[\s\-\(\)+]/g, '');
         if (!ph || !/^\d{7,15}$/.test(ph)) {
           phoneEl.classList.add('invalid');
-          if (errPhone) errPhone.textContent = 'Please enter a valid phone number.';
+          if (errPhone) errPhone.textContent = 'Please enter a valid phone number, or leave blank.';
           valid = false;
         }
       }
@@ -338,7 +364,7 @@
     });
 
     /* Live validation clear */
-    ['contact-name', 'contact-phone', 'contact-message'].forEach(id => {
+    ['contact-name', 'contact-phone', 'contact-email', 'contact-message'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.addEventListener('input', () => {
         el.classList.remove('invalid');
