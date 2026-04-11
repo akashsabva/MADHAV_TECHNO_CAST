@@ -2234,9 +2234,15 @@ button {
 
 .product-detail__grid {
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: minmax(0, 1fr) 360px;
   gap: 40px;
   align-items: flex-start;
+  word-wrap: break-word; /* Prevent text overflow on mobile */
+  overflow-wrap: break-word;
+}
+.product-detail__grid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .product-detail__title {
@@ -2320,14 +2326,22 @@ button {
 /* ── SPEC TABLE ─────────────────────── */
 .spec-section {
   margin-bottom: 36px;
+  width: 100%;
+}
+
+.spec-table-wrap {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto; /* Forces horizontal scroll safely within container on mobile */
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .spec-table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  min-width: 480px;
   font-size: 0.88rem;
 }
 
@@ -2805,7 +2819,7 @@ button {
 
   /* ── Product detail: stack layout ── */
   .product-detail__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .enquiry-sidebar { position: static; }
 
@@ -3139,3 +3153,17 @@ button {
   }
 }
 
+/* ── Prevent Mobile Text Overwrite/Overlap ── */
+.navbar__mobile-list a {
+  word-wrap: break-word;
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+}
+.product-detail__text, .product-detail__lead, .product-detail__features {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.app-tag {
+  white-space: normal;
+}
