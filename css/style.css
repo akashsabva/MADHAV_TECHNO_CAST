@@ -2327,17 +2327,21 @@ button {
 .spec-section {
   margin-bottom: 36px;
   width: 100%;
+}
+
+.spec-table-wrap {
+  width: 100%;
   max-width: 100vw;
-  overflow-x: auto; /* Forces horizontal scroll on mobile */
+  overflow-x: auto; /* Forces horizontal scroll safely within container on mobile */
   -webkit-overflow-scrolling: touch;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .spec-table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  min-width: 480px;
   font-size: 0.88rem;
 }
 
