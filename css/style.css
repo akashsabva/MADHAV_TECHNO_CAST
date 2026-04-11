@@ -2237,6 +2237,8 @@ button {
   grid-template-columns: 1fr 360px;
   gap: 40px;
   align-items: flex-start;
+  word-wrap: break-word; /* Prevent text overflow on mobile */
+  overflow-wrap: break-word;
 }
 
 .product-detail__title {
@@ -3139,3 +3141,17 @@ button {
   }
 }
 
+/* ── Prevent Mobile Text Overwrite/Overlap ── */
+.navbar__mobile-list a {
+  word-wrap: break-word;
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+}
+.product-detail__text, .product-detail__lead, .product-detail__features {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.app-tag {
+  white-space: normal;
+}
