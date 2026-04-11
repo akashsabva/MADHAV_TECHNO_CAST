@@ -2783,63 +2783,358 @@ button {
   color: var(--clr-primary-dark);
 }
 
-/* ── RESPONSIVE ADDITIONS ───────────── */
+/* ═══════════════════════════════════════
+   RESPONSIVE — TABLET (≤1024px)
+   ═══════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .mega-menu {
-    display: none; /* Handled via mobile menu on tablet */
+
+  /* ── Navbar: hide desktop nav + CTA, show hamburger ── */
+  .navbar__nav,
+  .navbar__nav + .btn { display: none; }
+
+  .navbar__hamburger { display: flex; }
+
+  /* Hamburger pushed to far right */
+  .navbar__inner {
+    justify-content: space-between;
   }
 
+  /* ── Mega menu: skip on tablet (use mobile menu) ── */
+  .mega-menu { display: none !important; }
+
+  /* ── Product detail: stack layout ── */
   .product-detail__grid {
     grid-template-columns: 1fr;
   }
+  .enquiry-sidebar { position: static; }
 
-  .enquiry-sidebar {
-    position: static;
-  }
-
+  /* ── About page story grid ── */
   .about-page__grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
+  /* ── About page infra: 2-col on tablet ── */
+  .about-page__infra {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ── Quality instruments: 2-col ── */
   .instrument-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* ── Contact grid: stack ── */
   .contact-page__grid {
     grid-template-columns: 1fr;
   }
+
+  /* ── Quality traceability section: stack on tablet ── */
+  .quality-trace-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* ── About export grid: stack ── */
+  .about-export-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* ── Stats: 2×2 ── */
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats__item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .stats__item:nth-child(2n) { border-bottom: 1px solid rgba(255,255,255,0.15); }
+  .stats__item:nth-last-child(-n+2) { border-bottom: none; }
 }
 
-@media (max-width: 640px) {
-  .page-banner {
-    padding: 60px 0 48px;
+
+/* ═══════════════════════════════════════
+   RESPONSIVE — MOBILE (≤768px)
+   ═══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Topbar: hide on very small, or stack ── */
+  .topbar__contact { gap: 12px; }
+  .topbar__link:last-child { display: none; } /* hide email, keep phone */
+
+  /* ── Navbar: logo left, hamburger right ── */
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
+  /* Hide desktop CTA button in navbar */
+  .navbar__inner > .btn { display: none; }
+  .navbar__hamburger { display: flex; margin-left: auto; }
+
+  /* ── Products grid: 1 column ── */
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* ── Product card: View Details link right-aligned ── */
+  .product-card > a[href] {
+    display: flex !important;
+    width: max-content !important;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 12px;
+  }
+
+  /* ── About section grid: stack ── */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about__img-accent { display: none; } /* hide overlap image on mobile */
+  .about__cert-badge { top: 12px; left: 12px; }
+
+  /* ── Stats: 2-col ── */
+  .stats__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Process steps: vertical stack ── */
+  .process__steps {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .process__connector { transform: rotate(90deg); }
+
+  /* ── Applications grid ── */
+  .applications__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  /* ── Why us grid: 2-col ── */
+  .why-us__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* ── Gallery grid: 1-col ── */
+  .gallery__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .gallery__item--large {
+    grid-column: span 2;
+  }
+
+  /* ── Export Strip: China Plus One center aligned ── */
   .export-strip__inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .export-strip__badges {
+    justify-content: center;
+    gap: 10px;
+  }
+  .export-strip__cta {
+    text-align: center;
+    font-size: 0.88rem;
   }
 
+  /* ── About page infra grid: 2-col ── */
+  .about-page__infra {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px;
+  }
+
+  /* ── About page story grid ── */
+  .about-page__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* ── Quality traceability 2-col → 1-col ── */
+  .quality-trace-grid,
+  .about-export-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Overflow-safe horizontal scroll for spec tables */
+  .spec-section {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .spec-table {
+    min-width: 480px;
+  }
+
+  /* ── Contact page: stack cards ── */
+  .contact-page__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* ── Contact cards: full card clickable ── */
+  .contact-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  /* Instrument grid: 1-col on mobile */
+  .instrument-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Director card: stack */
   .director-card {
     flex-direction: column;
     text-align: center;
+    gap: 16px;
+  }
+  .director-card__photo { margin: 0 auto; }
+
+  /* Hero height */
+  .hero { min-height: 520px; }
+  .hero__title { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+  .hero__subtitle { font-size: 0.92rem; }
+  .hero__cta-group { flex-direction: column; gap: 10px; }
+  .hero__cta-group .btn { width: 100%; justify-content: center; }
+
+  /* CTA strip buttons: stack */
+  .cta-strip__btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .cta-strip__btns .btn { width: 100%; max-width: 300px; justify-content: center; }
+
+  /* Section padding */
+  :root { --section-pad: 52px; }
+
+  /* Form row: stack */
+  .form__row {
+    grid-template-columns: 1fr !important;
+    gap: 0;
   }
 
+  /* Page banner */
+  .page-banner { padding: 60px 0 44px; }
+  .page-banner__title { font-size: clamp(1.5rem, 6vw, 2rem); }
+}
+
+
+/* ═══════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE (≤480px)
+   ═══════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  /* Products: 1 col */
+  .products__grid { grid-template-columns: 1fr; }
+
+  /* Why us: 1 col */
+  .why-us__grid { grid-template-columns: 1fr; }
+
+  /* Applications: 2 col */
+  .applications__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Gallery: 1 col */
+  .gallery__grid { grid-template-columns: 1fr; }
+  .gallery__item--large { grid-column: span 1; }
+
+  /* Infra: 2-col stays readable */
   .about-page__infra {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
   }
+  .infra-card { padding: 14px; }
+  .infra-card__desc { display: none; } /* hide desc, show on expand */
 
-  .instrument-grid {
-    grid-template-columns: 1fr;
-  }
+  /* Stats: 1 col */
+  .stats__grid { grid-template-columns: 1fr; }
+  .stats__item { border-bottom: 1px solid rgba(255,255,255,0.15); border-right: none; }
+  .stats__item:last-child { border-bottom: none; }
 
-  .product-detail__img-grid {
-    grid-template-columns: 1fr;
-  }
+  /* Topbar: hide entirely on very small */
+  .topbar { display: none; }
 
+  /* Logo image slightly smaller */
+  .navbar__logo-img { height: 36px; }
+
+  /* Cert banner: stack */
   .cert-banner {
     flex-direction: column;
     text-align: center;
+    gap: 16px;
+  }
+
+  /* Export strip: full width badges */
+  .export-badge { font-size: 0.75rem; padding: 6px 12px; }
+
+  /* Product card view details right-aligned -> Center for very small */
+  .product-card > a[href] {
+    width: 100% !important;
+    margin-left: 0;
+    justify-content: center !important;
   }
 }
+
+
+/* ═══════════════════════════════════════
+   CONTACT CARDS — FULLY CLICKABLE
+   (wraps entire card in anchor)
+   ═══════════════════════════════════════ */
+.contact-card--link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-grey-2);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-base);
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.contact-card--link:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--clr-primary);
+  transform: translateY(-2px);
+}
+
+.contact-card--link .contact-card__value a {
+  color: var(--clr-primary);
+}
+
+/* Expandable infra description (mobile) */
+.infra-card__desc-toggle {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .infra-card { cursor: pointer; }
+  .infra-card__desc { display: none; font-size: 0.75rem; }
+  .infra-card.expanded .infra-card__desc { display: block; margin-top: 6px; }
+  .infra-card__desc-toggle {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--clr-primary);
+    font-weight: 600;
+    margin-top: 6px;
+  }
+}
+
