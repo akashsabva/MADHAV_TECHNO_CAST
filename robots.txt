@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /insert.php
+Disallow: /.git/
+Disallow: /.github/
+
+Sitemap: https://madhavtechnocast.com/sitemap.xml
+
+# Madhav Techno Cast - Steel Casting & MS Casting Manufacturer, Ahmedabad, Gujarat, India
