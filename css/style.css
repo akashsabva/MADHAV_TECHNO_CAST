@@ -1,4 +1,4 @@
-﻿/* ======================================
+/* ======================================
    MADHAV TECHNO CAST – MODERN CSS
    Design: Industrial Dark Blue + Metallic
    Font: Poppins + Montserrat
@@ -1562,7 +1562,7 @@ button {
 
 /* ── FOOTER CREDIT ───────────────────────── */
 .footer__credit {
-  display: flex;
+  display: none;
   align-items: center;
 }
 .footer__credit-link {
