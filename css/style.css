@@ -7,21 +7,23 @@
 /* ── CSS CUSTOM PROPERTIES ─────────────── */
 :root {
   /* Colors */
-  --clr-primary:       #0f4c81;
-  --clr-primary-dark:  #0a3460;
-  --clr-primary-light: #1a6bb5;
-  --clr-accent:        #e8a020;
-  --clr-accent-dark:   #c97f10;
-  --clr-dark:          #0d1b2a;
-  --clr-dark-2:        #122436;
-  --clr-dark-3:        #1a3048;
-  --clr-grey-1:        #f4f6f9;
-  --clr-grey-2:        #e8ecf1;
-  --clr-grey-3:        #b0bec5;
-  --clr-text:          #2c3e50;
-  --clr-text-muted:    #607d8b;
+  --clr-primary:       #0f2b5c; /* Rich Navy Blue */
+  --clr-primary-dark:  #081a3b; /* Deep Midnight Blue */
+  --clr-primary-light: #1e40af; /* Rich Royal Blue */
+  --clr-accent:        #38bdf8; /* Soft Sky Blue Accent */
+  --clr-accent-dark:   #0284c7; /* Ocean Blue Accent */
+  --clr-dark:          #091124; /* Deep Navy-Charcoal */
+  --clr-dark-2:        #0f1a30; /* Dark Navy-Slate */
+  --clr-dark-3:        #1e2942; /* Medium Navy-Slate */
+  --clr-grey-1:        #f0f4f8; /* Light Soft Slate-Blue */
+  --clr-grey-2:        #e2ebf0; /* Border Soft Slate-Blue */
+  --clr-grey-3:        #94a3b8; /* Muted slate */
+  --clr-text:          #091124; /* Dark Slate-Blue text */
+  --clr-text-muted:    #4b5563; /* Slate grey text */
   --clr-white:         #ffffff;
-  --clr-green:         #25d366;
+  --clr-green:         #25d366; /* Keep whatsapp green */
+
+
 
   /* Typography */
   --font-main:    'Poppins', sans-serif;

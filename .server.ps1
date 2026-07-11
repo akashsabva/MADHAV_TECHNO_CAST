@@ -1,4 +1,4 @@
-$root = "c:\Users\JAYDIP B VIRJA\Desktop\MADHAV_TECHNO_CAST"
+$root = $PSScriptRoot
 $port = 8080
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add("http://localhost:$port/")
