@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /insert.php
 Disallow: /.git/
 Disallow: /.github/
 

@@ -29,6 +29,11 @@
   const contactForm   = document.getElementById('contact-form');
   const formSuccess   = document.getElementById('form-success');
 
+  /* ─── FOOTER COPYRIGHT YEAR ─────────────── */
+  document.querySelectorAll('.js-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
+
   /* ─── NAVBAR SCROLL EFFECT ──────────────── */
   const onScroll = () => {
     if (!navbar) return;
