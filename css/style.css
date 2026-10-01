@@ -2092,60 +2092,6 @@ button {
   color: var(--clr-accent);
 }
 
-/* ── CLIENTS MARQUEE STRIP ──────────── */
-.clients-strip {
-  background: var(--clr-grey-1);
-  padding: 28px 0;
-  border-top: 1px solid var(--clr-grey-2);
-  border-bottom: 1px solid var(--clr-grey-2);
-  overflow: hidden;
-}
-
-.clients-strip__label {
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--clr-text-muted);
-  margin-bottom: 20px;
-}
-
-.clients-strip__track-wrap {
-  overflow: hidden;
-}
-
-.clients-strip__track {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
-.clients-strip__track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.clients-strip__logo {
-  height: 44px;
-  width: auto;
-  max-width: 120px;
-  object-fit: contain;
-  filter: grayscale(100%) opacity(0.5);
-  transition: filter var(--transition-base);
-  flex-shrink: 0;
-}
-
-.clients-strip__logo:hover {
-  filter: grayscale(0%) opacity(1);
-}
-
 /* ── MAKE IN INDIA / EXPORT STRIP ───── */
 .export-strip {
   background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-dark) 100%);
