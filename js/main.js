@@ -215,10 +215,6 @@
   if (lightbox) lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-  /* ─── CLIENTS MARQUEE ───────────────────── */
-  const track = document.querySelector('.clients-strip__track');
-  if (track) track.innerHTML += track.innerHTML;
-
   /* ─── INFRA CARD EXPAND (mobile ≤480px) ── */
   document.querySelectorAll('.infra-card').forEach(card => {
     // Add toggle hint span if not present
