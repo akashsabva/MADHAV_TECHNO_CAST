@@ -435,6 +435,11 @@ button {
 .navbar__mobile.open {
   display: block;
   animation: slideDown 0.25s ease;
+  /* the navbar is sticky, so a menu taller than the screen needs its own scroll */
+  max-height: calc(100vh - 60px);
+  max-height: calc(100dvh - 60px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 @keyframes slideDown {
